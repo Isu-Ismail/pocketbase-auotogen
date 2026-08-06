@@ -542,6 +542,9 @@ type MetaConfig struct {
 	SenderName    string `form:"senderName" json:"senderName"`
 	SenderAddress string `form:"senderAddress" json:"senderAddress"`
 	HideControls  bool   `form:"hideControls" json:"hideControls"`
+
+	// AutogendConfigs stores custom collection autogenerate rules
+	AutogendConfigs map[string]any `form:"autogendConfigs" json:"autogendConfigs,omitempty"`
 }
 
 // Validate makes MetaConfig validatable by implementing [validation.Validatable] interface.

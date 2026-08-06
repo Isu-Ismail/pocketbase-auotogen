@@ -102,6 +102,11 @@ window.app.store = store({
                 icon: "ri-time-line",
                 label: "Crons",
             },
+            {
+                href: "#/settings/autogend",
+                icon: "ri-database-line",
+                label: "Autogenrate Data",
+            },
         ],
         Sync: [
             {
@@ -401,7 +406,7 @@ watch(
 
             container.classList.add("error");
 
-            input.__errListener = function() {
+            input.__errListener = function () {
                 removeErrorState(input, container);
                 app.utils.deleteByPath(app.store.errors, name);
             };
